@@ -1,0 +1,27 @@
+{
+  "name": "moodb",
+  "version": "1.0.0",
+  "description": "movie index application using vanila javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swssr/moodb.git"
+  },
+  "keywords": [
+    "movies",
+    "series",
+    "imdb"
+  ],
+  "author": "Simo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/swssr/moodb/issues"
+  },
+  "homepage": "https://github.com/swssr/moodb#readme",
+  "devDependencies": {
+    "cssnano": "^4.1.4"
+  }
+}

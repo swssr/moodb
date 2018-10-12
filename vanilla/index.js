@@ -16,7 +16,8 @@ const movies = [
       provider: "OMG",
       score: 6.5
     },
-    tags: ["Action", "Adventure", "Sci-Fi"]
+    tags: ["Action", "Adventure", "Sci-Fi"],
+    description: ''
   },
   {
     name: "Blade Runner",
@@ -24,7 +25,8 @@ const movies = [
       provider: "OMG",
       score: 8.1
     },
-    tags: ["Action", "Thriller", "Sci-Fi"]
+    tags: ["Action", "Thriller", "Sci-Fi"],
+    description: ''
   },
   {
     name: "Priest",
@@ -32,7 +34,8 @@ const movies = [
       provider: "OMG",
       score: 9
     },
-    tags: ["Fantasy", "Action", "Thriller"]
+    tags: ["Fantasy", "Action", "Thriller"],
+    description: ''
   },
   {
     name: "Mad max",
@@ -40,10 +43,10 @@ const movies = [
       provider: "OMG",
       score: 9.0
     },
-    tags: ["Action", "Adventure", "Sci-Fi"]
+    tags: ["Action", "Adventure", "Sci-Fi"],
+    description: ''
   }
 ];
-
 movies.forEach((movie, index) => {
   //TODO: remove or clarify logic
   disp = index < 3 ? `block` : `none`;
@@ -63,9 +66,7 @@ movies.forEach((movie, index) => {
                         }</span></span>
             </div>
             <ul class="tags">
-                <li class="tag">Action</li>
-                <li class="tag">Adventure</li>
-                <li class="tag">Sci-Fi</li>
+            ${movie.tags.map(tag => `<li class="tag">${tag}</li>`)} &nbsp;
             </ul>
             <div class="synopsis collapsed">
                 <p class="synopsis__text">
@@ -82,7 +83,7 @@ movies.forEach((movie, index) => {
         </div>
     </figure>
 `;
-//Decrease width, z-index, top-offset per index
+  //Decrease width, z-index, top-offset per index
   w -= 5;
   z -= 1;
   t += 1;
@@ -93,3 +94,5 @@ const collapse = event => {
   curr_card.classList.toggle("card--open");
 };
 btn_more.addEventListener("click", collapse);
+
+//TODO: shift the perspective

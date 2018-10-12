@@ -296,9 +296,9 @@ span {
     cursor: pointer;
 }
 
-.tag:not(:last-child)::after {
-    content: ',';
-}
+/* .tag:not(:last-child)::after {
+    content: '';
+} */
 
 .synopsis {
     position: relative;
@@ -362,8 +362,6 @@ span {
     height: 12px;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
-    transition: 1s;
     z-index: -1;
 }
 
